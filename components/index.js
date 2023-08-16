@@ -4,6 +4,13 @@ import Button from './Button';
 import Banner from './Banner';
 import TopSellers from './TopSellers';
 import CreatorCard from './CreatorCard';
+import HotBids from './HotBids';
+import SearchBar from './SearchBar';
+import NFTCard from './NFTCard';
+import Loader from './Loader';
+import Input from './Input';
+
+
 
 
 export {
@@ -12,5 +19,11 @@ export {
     Footer,
     Button,
     Banner,
-CreatorCard
+    SearchBar,  
+    CreatorCard,
+    HotBids,
+    NFTCard,
+    Loader,
+    Input
+
 }

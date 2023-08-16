@@ -18,6 +18,7 @@ import Button from './Button';
 
 
 const MenuItems = ({ isMobile, active, setActive }) => {
+  
   const generateLink = (i) => {
     switch (i) {
       case 0:
@@ -26,6 +27,7 @@ const MenuItems = ({ isMobile, active, setActive }) => {
         return '/listed-nfts';
       case 2:
         return '/my-nfts';
+     
       default:
         return '/';
     }
@@ -58,30 +60,24 @@ const MenuItems = ({ isMobile, active, setActive }) => {
 
 
 
-const ButtonGroup = ({ setActive, router }) => {
+const ButtonGroup = ( ) => {
   
   const { connectWallet, currentAccount } = useState([]);
 
-  return currentAccount ? (
+  return   
     <div className="flexCenter">
+
+      <Link to ="/create-nft">
+     
       <Button
         btnName="Create"
         btnType="primary"
         classStyles="mx-2 rounded-xl"
-        handleClick={() => {
-          setActive('');
-          router.push('/create-nft');
-        }}
+      
       />
+      </Link>
     </div>
-  ) : (
-    <Button
-      btnName="Connect"
-      btnType="outline"
-      classStyles="mx-2 rounded-lg"
-      handleClick={connectWallet}
-    />
-  );
+
 };
 
 const checkActive = (active, setActive, router) => {
@@ -180,9 +176,23 @@ const Navbar = () => {
           <ul className="list-none flexCenter flex-row">
             <MenuItems active={active} setActive={setActive} />
           </ul>
-          <div className="ml-4">
-            <ButtonGroup setActive={setActive}   />
-          </div>
+          {/* <div className="ml-4">
+            <ButtonGroup   />
+          </div> */}
+          
+
+          <div className="flexCenter">
+
+<Link href = "/create-nft">
+
+<Button
+  btnName="Create"
+  btnType="primary"
+  classStyles="mx-2 rounded-xl"
+
+/>
+</Link>
+</div>
         </div>
       </div>
  
@@ -220,7 +230,7 @@ const Navbar = () => {
               <MenuItems active={active} setActive={setActive} isMobile setIsOpen={setIsOpen} />
             </div>
             <div className="p-4 border-t dark:border-nft-black-1 border-nft-gray-1">
-              <ButtonGroup setActive={setActive}  />
+              <ButtonGroup   />
             </div>
           </div>
         )}

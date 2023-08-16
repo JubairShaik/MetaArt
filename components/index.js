@@ -9,11 +9,13 @@ import SearchBar from './SearchBar';
 import NFTCard from './NFTCard';
 import Loader from './Loader';
 import Input from './Input';
+import Model from './Model';
 
 
 
 
 export {
+
     Navbar,
     TopSellers,
     Footer,
@@ -24,6 +26,7 @@ export {
     HotBids,
     NFTCard,
     Loader,
-    Input
+    Input,
+    Model
 
 }

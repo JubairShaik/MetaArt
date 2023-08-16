@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
-import images from '../assets';
+import images from '@/public/assets';
 
 const Modal = ({ header, body, footer, handleClose }) => {
   const modalRef = useRef(null);

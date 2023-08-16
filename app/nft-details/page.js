@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 // import { NFTContext } from '../context/NFTContext';
-import { Loader, Button, Modal } from '@/components';
+import { Loader, Button, Model } from '@/components';
 import images from '@/public/assets';
 import { shortenAddress } from '@/utils/shortenAddress';
 
@@ -133,7 +133,7 @@ const Page = () => {
 
       </div>
       {paymentModal && (
-      <Modal
+      <Model
         header="Check Out"
         body={<PaymentBodyCmp nft={nft} nftCurrency={nftCurrency} />}
         footer={(
@@ -166,7 +166,7 @@ const Page = () => {
 
 
       {successModal && (
-      <Modal
+      <Model
         header="Payment Successful"
         body={(
           <div className="flexCenter flex-col text-center" onClick={() => setSuccessModal(false)}>

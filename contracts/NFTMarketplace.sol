@@ -47,11 +47,14 @@ contract NFTMarketplace is ERC721URIStorage {
 
 
     );
+ 
 
     
     
     constructor() ERC721("Metaverse Tokens", "METT") {
       owner = payable(msg.sender);
+      //  this.totalSupply = 0;
+      
     }
 
     // function deploy() public {
